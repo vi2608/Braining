@@ -1,5 +1,5 @@
 import streamlit as st
-from openai import OpenAI
+import openai
 import uuid
 import random
 
@@ -108,7 +108,7 @@ This GPT specializes in making health-related diagnostics and creating appropria
     '''
     Provide a detailed plan based on the given information.
     """
-    client = OpenAI(api_key = "sk-svcacct-LhP5BHBX0wWVh25exxnzT3BlbkFJxSaggACt39jx60CP8Ge2")
+    client = openai.OpenAI(api_key = "sk-svcacct-LhP5BHBX0wWVh25exxnzT3BlbkFJxSaggACt39jx60CP8Ge2")
     try:
         response = client.chat.completions.create(
             model="gpt-4o-mini",
